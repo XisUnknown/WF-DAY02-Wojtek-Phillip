@@ -1,0 +1,192 @@
+$heightHeader: 7vh;
+$heightSearch: 70%;
+$buttonRadius: 5px;
+$marginNavbar: 12px;
+$mainColorHeader: #232F3E;
+$generalFont: 2vh;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: #EAEDED;
+	header {
+		background-color: $mainColorHeader;
+
+
+		.searchbar {
+			display: flex;
+			align-content: flex-start;
+			height: $heightHeader;
+
+			#logo {
+				height: 100%;
+			}
+
+			#searchField {
+				height: $heightSearch;
+				width: 40%;
+				min-width: 300px;
+			}
+
+			#searchOptions {
+				border-radius: $buttonRadius 0 0 $buttonRadius;
+				height: $heightSearch+9%;
+			}
+
+			#searchCommit {
+				height: $heightSearch+9%;
+				border-radius: 0 $buttonRadius $buttonRadius 0;
+				background-color: #FEBD69;
+			}
+
+			#searchCommit:hover {
+				background-color: #F3A847;
+			}
+
+		}
+
+		nav {
+			height: $heightHeader;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+
+			ul {
+				display: flex;
+				justify-content: flex-start;
+
+
+				li {
+					padding: $marginNavbar;
+					margin: 0 3px;
+					list-style: none;
+					font-size: $generalFont*1.1;
+					color: lightgray;
+
+					a {
+						color: lightgray;
+					}
+				}
+			}
+
+			.buttons {
+				input {
+					color: whitesmoke;
+					font-weight: 550;
+					font-size: $generalFont*1.1;
+					background-color: $mainColorHeader;
+					border: none;
+					margin: $marginNavbar/4 $marginNavbar/4;
+					padding: $marginNavbar/2 $marginNavbar/2;
+				}
+
+				input:hover {
+					border: 1px solid dimgray;
+					border-radius: $buttonRadius;
+				}
+			}
+		}
+	}
+
+	main {
+		min-height: 100vh;
+		background: #EAEDED url(../img/backgroundImage.jpg) no-repeat;
+		background-size: 100% auto;
+		width: 90vw;
+		margin: 0 auto;
+
+		#addSpacer {
+			width: 100%;
+			height: 250px;
+		}
+
+		#contentWrapper {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			.productCard {
+				h1{
+					font-size: $generalFont*2;
+				}
+				width: 20%;
+				min-width: 250px;
+				height: 350px;
+				padding: 10px;
+				margin: 20px;
+				background-color: white;
+
+				img {
+					height: 200px;
+					max-width: 100%;
+					display: block;
+					margin: 10px auto;
+				}
+				button{
+					background-color: #F3A847;
+					color: black;
+					border-radius: 4px;
+					border: none;
+					width: 80%;
+					height: 30px;
+					text-align: center;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	 #topLink{
+		 width: 100%;
+		 height: 10vh;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+		 font-size: 20pt;
+		 background-color: #37475A;
+		 a{
+			 color:white;
+			 text-decoration: none;
+		 }
+	 }
+	 footer{
+		 height: 5vh;
+		 background-color: #131A22;
+		 ul{
+			 display: flex;
+			 justify-content: center;
+			 a{
+				 text-decoration: none;
+				 color:lightgray;
+			 }
+			 a:hover{
+				 text-decoration: underline;
+			 }
+			 li{
+				 list-style: none;
+				 margin: 3px 10px;
+			 }
+			 #copyright{
+				 color:dimgray;
+			 }
+		 }
+	 }
+}
+
+.itemCard{
+
+	img{
+		width: 10em;
+		height: 10em;
+	} 
+	h5{
+		font-size: 1.2em;
+
+	}
+	p{
+
+	}
+}

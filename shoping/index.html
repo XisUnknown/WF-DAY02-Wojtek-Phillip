@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Amazon, just better</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./main.js"></script>
+	<script src="./product.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="searchbar">
+			<img src="./img/output-onlinepngtools.png" alt="" id="logo">
+			<select name="Alle" id="searchOptions">
+				<option value="Alle" selected disabled></option>
+				<option value="">Drugs</option>
+				<option value="">Hookers</option>
+				<option value="">Alcohol</option>
+				<option value="">Cars</option>
+			</select>
+			<input type="text" name="searchbar" value="" id="searchField">
+			<input type="button" name="search" value="search" id="searchCommit">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="" title="">Erneut kaufen</a></li>
+				<li><a href="" title="">Max' Amazon</a></li>
+				<li><a href="" title="">Gutscheine</a></li>
+				<li><a href="" title="">Verkaufen</a></li>
+				<li><a href="" title="">Hilfe</a></li>
+				<li><a href="" title="">Kuche, Haushalt & Wohnen</a></li>
+				<li><a href="" title="">Elektronik & Foto</a></li>
+				<li><a href="einkauf.html" title="" onclick="changeHTML()">Computer</a></li>
+			</ul>
+			<div class="buttons">
+				<input type="button" name="Language" value="EN">
+				<input type="button" name="Account" value="Hallo Max">
+				<input type="button" name="Bestellungenn" value="Bestellungen">
+				<input type="button" name="Einkaufswagen" value="Prime">
+				<input type="button" name="My prime" onclick="changeHTML()" value="Einkaufswagen" href="einkauf.html">
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div id="addSpacer"></div>
+		<div id="contentWrapper">
+			<div class="productCard">
+				<h1 class="name">Swiming glass</h1>
+				<img src="./img/example.jpg" alt="" class="imgProduct">
+				<p class="price">33,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=0 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">LadeKabel schwarz</h1>
+				<img src="./img/Ladekabel.jpg" alt="" class="imgProduct">
+				<p class="price">15,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=1 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Ladekabel grün</h1>
+				<img src="./img/Ladekabel2.jpg" alt="" class="imgProduct">
+				<p class="price">17,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=2 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Nokia</h1>
+				<img src="./img/Nokia.jpg" alt="" class="imgProduct">
+				<p class="price">199,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=3 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Samsung</h1>
+				<img src="./img/Samsung.jpg" alt="" class="imgProduct">
+				<p class="price">169,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=4 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Apple</h1>
+				<img src="./img/Apple.jpg" alt="" class="imgProduct">
+				<p class="price">699,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=5 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Cover Rose</h1>
+				<img src="./img/cover1.jpg" alt="" class="imgProduct">
+				<p class="price">19,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=6 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Cover Wood</h1>
+				<img src="./img/cover2.jpg" alt="" class="imgProduct">
+				<p class="price">19,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=7 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			<div class="productCard">
+				<h1 class="name">Cover Lieblingszicke</h1>
+				<img src="./img/cover3.jpg" alt="" class="imgProduct">
+				<p class="price">19,99&euro;</p>
+				<button type="button" onclick="addToCart(this.id)" id=8 class='addButton'>🛒 Add to Cart</button>
+			</div>
+			
+		</div>
+	</main>
+	<div id="topLink"><a href="#">Zurueck zum Anfang</a></div>
+
+	<footer>
+		<ul>
+			<a href="#"><li>Unsere AGB</li></a>
+			<a href="#"><li>Datenschutzerklaerung</li></a>
+			<a href="#"><li>Impressum</li></a>
+			<a href="#"><li>Hinweise zu Cookies</li></a>
+			<a href="#"><li>Hinweise zu interessenbasierter Werbung</li></a>
+			<li id="copyright">&COPY 1998-2019 Amazon.com Inc. oder Tochtergesellschaften</li>
+		</ul>
+	</footer>
+
+</body>
+
+</html>

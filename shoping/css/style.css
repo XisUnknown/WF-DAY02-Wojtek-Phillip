@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body {
+  background-color: #EAEDED; }
+  body header {
+    background-color: #232F3E; }
+    body header .searchbar {
+      display: flex;
+      align-content: flex-start;
+      height: 7vh; }
+      body header .searchbar #logo {
+        height: 100%; }
+      body header .searchbar #searchField {
+        height: 70%;
+        width: 40%;
+        min-width: 300px; }
+      body header .searchbar #searchOptions {
+        border-radius: 5px 0 0 5px;
+        height: 79%; }
+      body header .searchbar #searchCommit {
+        height: 79%;
+        border-radius: 0 5px 5px 0;
+        background-color: #FEBD69; }
+      body header .searchbar #searchCommit:hover {
+        background-color: #F3A847; }
+    body header nav {
+      height: 7vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end; }
+      body header nav ul {
+        display: flex;
+        justify-content: flex-start; }
+        body header nav ul li {
+          padding: 12px;
+          margin: 0 3px;
+          list-style: none;
+          font-size: 2.2vh;
+          color: lightgray; }
+          body header nav ul li a {
+            color: lightgray; }
+      body header nav .buttons input {
+        color: whitesmoke;
+        font-weight: 550;
+        font-size: 2.2vh;
+        background-color: #232F3E;
+        border: none;
+        margin: 3px 3px;
+        padding: 6px 6px; }
+      body header nav .buttons input:hover {
+        border: 1px solid dimgray;
+        border-radius: 5px; }
+  body main {
+    min-height: 100vh;
+    background: #EAEDED url(../img/backgroundImage.jpg) no-repeat;
+    background-size: 100% auto;
+    width: 90vw;
+    margin: 0 auto; }
+    body main #addSpacer {
+      width: 100%;
+      height: 250px; }
+    body main #contentWrapper {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+      body main #contentWrapper .productCard {
+        width: 20%;
+        min-width: 250px;
+        height: 350px;
+        padding: 10px;
+        margin: 20px;
+        background-color: white; }
+        body main #contentWrapper .productCard h1 {
+          font-size: 4vh; }
+        body main #contentWrapper .productCard img {
+          height: 200px;
+          max-width: 100%;
+          display: block;
+          margin: 10px auto; }
+        body main #contentWrapper .productCard button {
+          background-color: #F3A847;
+          color: black;
+          border-radius: 4px;
+          border: none;
+          width: 80%;
+          height: 30px;
+          text-align: center;
+          vertical-align: middle; }
+  body #topLink {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+    background-color: #37475A; }
+    body #topLink a {
+      color: white;
+      text-decoration: none; }
+  body footer {
+    height: 5vh;
+    background-color: #131A22; }
+    body footer ul {
+      display: flex;
+      justify-content: center; }
+      body footer ul a {
+        text-decoration: none;
+        color: lightgray; }
+      body footer ul a:hover {
+        text-decoration: underline; }
+      body footer ul li {
+        list-style: none;
+        margin: 3px 10px; }
+      body footer ul #copyright {
+        color: dimgray; }
+
+.itemCard img {
+  width: 10em;
+  height: 10em; }
+.itemCard h5 {
+  font-size: 1.2em; }
+
+/*# sourceMappingURL=style.css.map */
