@@ -83,7 +83,9 @@
             $("#item" + (i + 1)).append("<img src=" + url + ">");
         }
         $('img').on('click', function (eventObject) {
-            url = this.src;
+            var buff;
+            buff=this.src.indexOf("/img/santa.png");
+            url="."+this.src.slice(buff);
             document.getElementById('result').innerHTML = "you clicked on" + url;
             switch(url){
                 case "./img/santa.png":
