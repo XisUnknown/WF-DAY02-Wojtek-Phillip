@@ -30,16 +30,31 @@ function printCart(arr){
 		name.textContent = arr[i].name;
 		let price = document.createElement("p");
 		price.textContent = arr[i].price + "€";
+		
+		let amountDiv = document.createElement("div");
+		amountDiv.id= "amountDiv";
 		let amount = document.createElement("p");
+		amount.id ="amount"+(i+1);
 		amount.textContent = arr[i].amount;
-		console.log(amount);
+		let plus = document.createElement("button");
+		plus.className = "plusCard";
+		plus.id="plus"+(i+1);
+		plus.textContent = "+";
+		let minus = document.createElement("button");
+		minus.className ="minusCard";
+		minus.id="minus"+(i+1);
+
+		minus.textContent = "-";
 		let remove = document.createElement("button");
 		remove.textContent = "Delete";
 		remove.onclick = function (){removeItem(remove)};
 		itemCard.appendChild(image);
 		itemCard.appendChild(name);	
 		itemCard.appendChild(price);	
-		itemCard.appendChild(amount);
+		itemCard.appendChild(amountDiv);
+		amountDiv.appendChild(amount);
+		amountDiv.appendChild(plus);
+		amountDiv.appendChild(minus);
 		itemCard.appendChild(remove);
 	
 		document.getElementById("einkauf").appendChild(itemCard);
@@ -55,3 +70,28 @@ function removeItem(a){
 	a.parentNode.parentNode.removeChild(a.parentNode);
 
 }
+$(document).ready(function() {
+$(".plusCard").on('click', function(){
+	console.log(arr[this.id.slice(4)-1].amount);
+	let sum = arr[this.id.slice(4)-1].amount; 
+	sum++;
+
+	$("#amount"+this.id.slice(4)).text(sum);
+	arr[this.id.slice(4)-1].amount = sum;
+	fullPrice += arr[this.id.slice(4)-1].price *1;
+	document.getElementById("summe").innerHTML = fullPrice.toFixed(2) + "€";
+	
+});
+
+$(".minusCard").on('click', function(){
+	if (arr[this.id.slice(5)-1].amount > 0){
+	let sum = arr[this.id.slice(5)-1].amount; 
+	sum--;
+
+	$("#amount"+this.id.slice(5)).text(sum);
+	arr[this.id.slice(5)-1].amount = sum;
+	fullPrice -= arr[this.id.slice(5)-1].price *1;
+	document.getElementById("summe").innerHTML = fullPrice.toFixed(2) + "€";
+
+}});
+});
