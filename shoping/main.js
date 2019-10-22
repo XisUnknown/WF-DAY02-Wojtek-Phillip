@@ -39,7 +39,7 @@ function printCart(arr){
 		itemCard.appendChild(image);
 		itemCard.appendChild(name);	
 		itemCard.appendChild(price);	
-		itemCart.appendChild(amount);
+		itemCard.appendChild(amount);
 		itemCard.appendChild(remove);
 	
 		document.getElementById("einkauf").appendChild(itemCard);
