@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            align-items: space-between;
+            background-color: gold;
+        }
+
+        div {
+            width: 30vw;
+            height: 30vw;
+            background-color: red;
+        }
+
+        img {
+            width: 100%;
+            height: 30vw;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+    <section id="container">
+        <div id="item1">
+
+        </div>
+        <div id="item2">
+
+        </div>
+        <div id="item3">
+
+        </div>
+        <div id="item4">
+
+        </div>
+        <div id="item5">
+
+        </div>
+        <div id="item6">
+
+        </div>
+        <div id="item7">
+
+        </div>
+        <div id="item8">
+
+        </div>
+        <div id="item9">
+
+        </div>
+    </section>
+    <script>
+        var url;
+        for (let i = 0; i < 9; i++) {
+            switch (Math.floor(Math.random() * 3 + 1)) {
+                case 1:
+                    url = "./img/bell.png";
+                    break;
+                case 2:
+                    url = "./img/present.webp";
+                    break;
+                case 3:
+                    url = "./img/santa.png";
+                    break;
+            }
+            $("#item" + (i + 1)).append("<img src=" + url + ">");
+        }
+        $('img').on('click', function (eventObject) {
+            url = this.src;
+            document.getElementById('result').innerHTML = "you clicked on" + url;
+            switch(url){
+                case "file:///C:/Users/Wojciech%20Schlesinger/Desktop/Woche5/Di/WF-DAY02-Wojtek-Phillip/basic/img/santa.png":
+                    this.src="./img/present.webp";
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>
